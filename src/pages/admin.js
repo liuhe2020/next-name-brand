@@ -2,6 +2,10 @@
 // // TYPE IN PRODUCT DETAILS IN CODE BELOW
 // // THEN GO TO /ADMIN PAGE AND CLICK ON BUTTONS TO FIRE THE FUNCTIONS
 
+export default function admin() {
+  return <>/</>;
+}
+
 // import db from "../firebase";
 // import firebase from "firebase";
 
