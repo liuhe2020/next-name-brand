@@ -1,0 +1,14 @@
+/* ./styles/globals.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "nprogress";
+
+.footer-ul {
+  @apply text-gray-500 w-48 px-5 md:mx-5 xl:mx-10 2xl:mx-14;
+}
+
+.footer-li {
+  @apply text-sm sm:text-base pt-2 hover:text-black;
+}
