@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
 import NProgress from "nprogress";
 
-import Header from "./Header";
 import MobileNav from "./ui/MobileNav";
 import Search from "./Search";
 import Footer from "./Footer";
@@ -42,12 +41,6 @@ export default function Layout({ children, categories }) {
 
   return (
     <>
-      <Header
-        navToggle={navToggle}
-        setNavToggle={setNavToggle}
-        setSearchToggle={setSearchToggle}
-        categories={categories}
-      />
       <AnimatePresence>
         {navToggle && (
           <motion.div
