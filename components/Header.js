@@ -97,12 +97,12 @@ export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
             </Link>
           </li>
         </ul>
-        {/* <div className="flex align-self-end text-gray-400">
+        <div className="flex align-self-end text-gray-400">
           <SearchIcon
             onClick={() => setSearchToggle((prev) => !prev)}
             className="cursor-pointer w-6"
           />
-          <div className="relative" ref={dropDownRef}>
+          {/* <div className="relative" ref={dropDownRef}>
             <UserIcon
               className="cursor-pointer w-6 ml-3"
               onClick={() => setDropDown((prev) => !prev)}
@@ -147,8 +147,8 @@ export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
             className={`${
               !navToggle && "hidden"
             } cursor-pointer w-7 ml-4 lg:hidden`}
-          />
-        </div> */}
+          /> */}
+        </div>
       </div>
     </div>
   );
