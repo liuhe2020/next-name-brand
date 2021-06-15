@@ -5,11 +5,11 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import moment from "moment";
-import Currency from "react-currency-formatter";
 
 import db from "../../firebase";
 import ButtonDark from "../../components/ui/ButtonDark";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/solid";
+import CurrencyFormat from "../../components/ui/CurrencyFormat";
 
 export default function Category({ slug, products }) {
   // capitalize category slug for the Head & h1 heading
@@ -143,7 +143,7 @@ export default function Category({ slug, products }) {
                 </p>
                 <div>
                   <div className="text-lg md:text-xl">
-                    <Currency quantity={price} currency="GBP" />
+                    <CurrencyFormat value={price} />
                   </div>
                   <div className="py-5 md:pt-7">
                     <Link href={`/products/${id}`}>

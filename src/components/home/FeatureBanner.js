@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import Currency from "react-currency-formatter";
+import CurrencyFormat from "../ui/CurrencyFormat";
 
 import ButtonDark from "../ui/ButtonDark";
 
@@ -59,7 +59,7 @@ export default function FeatureBanner({ products }) {
                     {description}
                   </div>
                   <div className="text-2xl mt-10">
-                    <Currency quantity={price} currency="GBP" />
+                    <CurrencyFormat value={price} />
                   </div>
                   <div className="mt-5">
                     <Link href={`/products/${id}`}>

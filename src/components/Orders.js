@@ -1,6 +1,7 @@
 import Image from "next/image";
 import moment from "moment";
-import Currency from "react-currency-formatter";
+
+import CurrencyFormat from "./ui/CurrencyFormat";
 
 export default function Orders({ orders }) {
   return (
@@ -20,7 +21,7 @@ export default function Orders({ orders }) {
             <div>
               <div className="lg:pb-2">
                 <span className="">Order total: </span>
-                <Currency quantity={amount} currency={"gbp"} />
+                <currencyFormat value={amount} />
               </div>
               <h3 className="">
                 Shipping: {amountShipping === 0 ? "Free" : amountShipping}
@@ -43,7 +44,7 @@ export default function Orders({ orders }) {
                 </div>
                 <p className="w-1/3 sm:w-1/2">No Name Navigator X Smartwatch</p>
                 <p className="">Qty: {quantity}</p>
-                <Currency quantity={amount_total / 100} currency={"gbp"} />
+                <CurrencyFormat value={amount_total / 100} />
               </div>
             ))}
           </div>

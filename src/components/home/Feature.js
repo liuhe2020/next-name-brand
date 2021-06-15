@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Currency from "react-currency-formatter";
+
+import CurrencyFormat from "../ui/CurrencyFormat";
 import ButtonDark from "../ui/ButtonDark";
 
 export default function Feature({ products }) {
@@ -20,7 +21,7 @@ export default function Feature({ products }) {
               {description}
             </div>
             <div className="text-xl md:text-2xl lg:text-3xl my-5 md:my-8">
-              <Currency quantity={price} currency="GBP" />
+              <CurrencyFormat value={price} />
             </div>
             <Link href={`/products/${id}`}>
               <a>

@@ -4,7 +4,6 @@ import { useSession } from "next-auth/client";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { PlusIcon, MinusSmIcon } from "@heroicons/react/outline";
-import Currency from "react-currency-formatter";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 
@@ -17,6 +16,7 @@ import {
   selectBasketSubtotal,
 } from "../components/redux/basketSlice";
 import ButtonDark from "../components/ui/ButtonDark";
+import CurrencyFormat from "../components/ui/CurrencyFormat";
 
 const stripePromise = loadStripe(process.env.stripe_public_key);
 
@@ -87,7 +87,7 @@ export default function Checkout() {
                   </div>
                   <div className="w-1/4 flex flex-col font-semibold items-end">
                     <div className="mb-3">
-                      <Currency quantity={item.price} currency={"GBP"} />
+                      <CurrencyFormat value={item.price} />
                     </div>
                     <div className="flex items-center">
                       <p className="text-xs sm:text-sm">Qty:</p>

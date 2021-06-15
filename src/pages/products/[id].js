@@ -2,12 +2,12 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
-import Currency from "react-currency-formatter";
 
 import db from "../../firebase";
 import ButtonDark from "../../components/ui/ButtonDark";
 import ButtonLight from "../../components/ui/ButtonLight";
 import { addToBasket } from "../../components/redux/basketSlice";
+import CurrencyFormat from "../../components/ui/CurrencyFormat";
 
 export default function Product({ product }) {
   const { name, price, description, image } = product;
@@ -34,7 +34,7 @@ export default function Product({ product }) {
               {description}
             </p>
             <div className="text-lg sm:text-xl">
-              <Currency quantity={price} currency="GBP" />
+              <CurrencyFormat value={price} />
             </div>
             <div className="py-5 md:pt-7">
               <ButtonDark
