@@ -8,13 +8,26 @@
     "start": "next start"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.1",
+    "@reduxjs/toolkit": "^1.6.0",
+    "axios": "^0.21.1",
+    "firebase": "^8.6.7",
+    "firebase-admin": "^9.9.0",
+    "framer-motion": "^4.1.17",
+    "micro": "^9.3.4",
+    "moment": "^2.29.1",
     "next": "latest",
+    "next-auth": "^3.26.1",
+    "nprogress": "^0.2.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-responsive-carousel": "^3.2.18",
+    "react-social-icons": "^5.4.1",
+    "stripe": "^8.154.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.4",
     "postcss": "^8.1.10",
-    "tailwindcss": "^2.1.1"
+    "tailwindcss": "^2.0.4"
   }
 }
