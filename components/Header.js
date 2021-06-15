@@ -137,7 +137,7 @@ export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
               )}
             </div>
           </Link> */}
-          {/* <MenuAlt3Icon
+          <MenuAlt3Icon
             onClick={() => setNavToggle(true)}
             className={`${
               navToggle && "hidden"
@@ -148,7 +148,7 @@ export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
             className={`${
               !navToggle && "hidden"
             } cursor-pointer w-7 ml-4 lg:hidden`}
-          /> */}
+          />
         </div>
       </div>
     </div>
