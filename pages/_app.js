@@ -8,20 +8,20 @@ import Layout from "../components/Layout";
 import { hydrateBasket } from "../components/redux/basketSlice";
 
 export default function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    // try & catch in case local storage is disabled
-    // local storage is undefined initially in next.js due to SSR
-    try {
-      if (typeof localStorage !== "undefined") {
-        const storedBasket = localStorage.getItem("name-brand-basket");
-        storedBasket
-          ? store.dispatch(hydrateBasket(JSON.parse(storedBasket)))
-          : store.dispatch(hydrateBasket({ item: [] }));
-      }
-    } catch (err) {
-      console.error(err);
-    }
-  }, []);
+  // useEffect(() => {
+  //   // try & catch in case local storage is disabled
+  //   // local storage is undefined initially in next.js due to SSR
+  //   try {
+  //     if (typeof localStorage !== "undefined") {
+  //       const storedBasket = localStorage.getItem("name-brand-basket");
+  //       storedBasket
+  //         ? store.dispatch(hydrateBasket(JSON.parse(storedBasket)))
+  //         : store.dispatch(hydrateBasket({ item: [] }));
+  //     }
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // }, []);
 
   return (
     <AuthProvider session={pageProps.session}>
