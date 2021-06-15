@@ -21,6 +21,7 @@
     "nprogress": "^0.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-redux": "^7.2.4",
     "react-responsive-carousel": "^3.2.18",
     "react-social-icons": "^5.4.1",
     "stripe": "^8.154.0"
