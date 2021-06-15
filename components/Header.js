@@ -19,7 +19,7 @@ export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
   const [dropDown, setDropDown] = useState(false);
   const dropDownRef = useRef();
 
-  // const basketQty = useSelector(selectBasketQty);
+  const basketQty = useSelector(selectBasketQty);
 
   const [session] = useSession();
 
@@ -127,7 +127,7 @@ export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
               </li>
             </ul>
           </div>
-          {/* <Link href="/checkout">
+          <Link href="/checkout">
             <div className="relative cursor-pointer w-6 ml-3 flex items-center">
               <ShoppingBagIcon />
               {basketQty > 0 && (
@@ -136,8 +136,8 @@ export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
                 </span>
               )}
             </div>
-          </Link> */}
-          {/* <MenuAlt3Icon
+          </Link>
+          <MenuAlt3Icon
             onClick={() => setNavToggle(true)}
             className={`${
               navToggle && "hidden"
@@ -148,7 +148,7 @@ export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
             className={`${
               !navToggle && "hidden"
             } cursor-pointer w-7 ml-4 lg:hidden`}
-          /> */}
+          />
         </div>
       </div>
     </div>
