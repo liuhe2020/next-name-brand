@@ -104,10 +104,7 @@ export default function Checkout() {
                       </div>
                     </div>
                     <div className="mt-3 mb-6">
-                      <Currency
-                        quantity={item.price * item.quantity}
-                        currency={"GBP"}
-                      />
+                      <CurrencyFormat value={item.price * item.quantity} />
                     </div>
                     <p
                       className="text-xs font-semibold text-gray-500 hover:text-black cursor-pointer sm:text-sm"
@@ -131,7 +128,7 @@ export default function Checkout() {
               <div className="my-6 lg:mb-10">
                 <div className="flex justify-between">
                   <h2 className="">Subtotal</h2>
-                  <Currency quantity={basketSubtotal} currency={"GBP"} />
+                  <CurrencyFormat value={basketSubtotal} />
                 </div>
                 <h3 className="text-gray-500 text-sm">(Including VAT)</h3>
               </div>

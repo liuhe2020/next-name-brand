@@ -21,7 +21,7 @@ export default function Orders({ orders }) {
             <div>
               <div className="lg:pb-2">
                 <span className="">Order total: </span>
-                <currencyFormat value={amount} />
+                <CurrencyFormat value={amount} />
               </div>
               <h3 className="">
                 Shipping: {amountShipping === 0 ? "Free" : amountShipping}
