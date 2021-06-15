@@ -16,23 +16,23 @@ import { selectBasketQty } from "../components/redux/basketSlice";
 
 export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
   const [navBar, setNavBar] = useState(false);
-  // const [dropDown, setDropDown] = useState(false);
-  // const dropDownRef = useRef();
+  const [dropDown, setDropDown] = useState(false);
+  const dropDownRef = useRef();
 
   // const basketQty = useSelector(selectBasketQty);
-  // const [session] = useSession();
+  const [session] = useSession();
 
-  // const router = useRouter();
+  const router = useRouter();
 
-  // const handleSignIn = () => {
-  //   session ? router.push("/account") : signIn();
-  //   setDropDown(false);
-  // };
+  const handleSignIn = () => {
+    session ? router.push("/account") : signIn();
+    setDropDown(false);
+  };
 
-  // const handleSignOut = () => {
-  //   session ? signOut() : signIn();
-  //   setDropDown(false);
-  // };
+  const handleSignOut = () => {
+    session ? signOut() : signIn();
+    setDropDown(false);
+  };
 
   // listening for scroll event to fire navBar state change
   useEffect(() => {
@@ -102,7 +102,7 @@ export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
             onClick={() => setSearchToggle((prev) => !prev)}
             className="cursor-pointer w-6"
           />
-          {/* <div className="relative" ref={dropDownRef}>
+          <div className="relative" ref={dropDownRef}>
             <UserIcon
               className="cursor-pointer w-6 ml-3"
               onClick={() => setDropDown((prev) => !prev)}
@@ -126,7 +126,7 @@ export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
               </li>
             </ul>
           </div>
-          <Link href="/checkout">
+          {/* <Link href="/checkout">
             <div className="relative cursor-pointer w-6 ml-3 flex items-center">
               <ShoppingBagIcon />
               {basketQty > 0 && (
