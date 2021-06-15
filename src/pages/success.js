@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import Link from "next/link";
+import Head from "next/head";
 
 import ButtonDark from "../components/ui/ButtonDark";
 import { emptyBasket } from "../components/redux/basketSlice";
