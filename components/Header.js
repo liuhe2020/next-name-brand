@@ -20,6 +20,7 @@ export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
   const dropDownRef = useRef();
 
   const basketQty = useSelector(selectBasketQty);
+
   const [session] = useSession();
 
   const router = useRouter();
@@ -45,14 +46,14 @@ export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
   }, []);
 
   // listen for click event to close dropdown menu
-  // useEffect(() => {
-  //   // if clicked outside dropdown, close it
-  //   const closeDropDown = (e) =>
-  //     e.target.closest("div") !== dropDownRef.current && setDropDown(false);
+  useEffect(() => {
+    // if clicked outside dropdown, close it
+    const closeDropDown = (e) =>
+      e.target.closest("div") !== dropDownRef.current && setDropDown(false);
 
-  //   window.addEventListener("click", closeDropDown);
-  //   return () => window.removeEventListener("click", closeDropDown);
-  // }, []);
+    window.addEventListener("click", closeDropDown);
+    return () => window.removeEventListener("click", closeDropDown);
+  }, []);
 
   return (
     <div
@@ -126,7 +127,7 @@ export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
               </li>
             </ul>
           </div>
-          <Link href="/checkout">
+          {/* <Link href="/checkout">
             <div className="relative cursor-pointer w-6 ml-3 flex items-center">
               <ShoppingBagIcon />
               {basketQty > 0 && (
@@ -135,8 +136,8 @@ export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
                 </span>
               )}
             </div>
-          </Link>
-          {/* <MenuAlt3Icon
+          </Link> */}
+          <MenuAlt3Icon
             onClick={() => setNavToggle(true)}
             className={`${
               navToggle && "hidden"
@@ -147,7 +148,7 @@ export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
             className={`${
               !navToggle && "hidden"
             } cursor-pointer w-7 ml-4 lg:hidden`}
-          /> */}
+          />
         </div>
       </div>
     </div>
