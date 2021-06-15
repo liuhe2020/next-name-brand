@@ -14,37 +14,37 @@ export default function Home({ featureBannerProducts, featureProducts }) {
         <meta name="description" content="Name Brand online store" />
         <link rel="icon" href="/images/favicon.png" />
       </Head>
-      <Banner />
+      {/* <Banner />
       <Feature products={featureProducts} />
-      <FeatureBanner products={featureBannerProducts} />
+      <FeatureBanner products={featureBannerProducts} /> */}
       <BannerGrid />
     </div>
   );
 }
 
-export async function getStaticProps() {
-  const getProducts = async (category) => {
-    const products = await db
-      .collection("products")
-      .doc("categories")
-      .collection(category)
-      .orderBy("date_added", "asc")
-      .get();
+// export async function getStaticProps() {
+//   const getProducts = async (category) => {
+//     const products = await db
+//       .collection("products")
+//       .doc("categories")
+//       .collection(category)
+//       .orderBy("date_added", "asc")
+//       .get();
 
-    return products.docs.map((product) => ({
-      name: product.data().name,
-      id: product.id,
-      price: product.data().price,
-      description: product.data().description,
-      image: product.data().image,
-      type: product.data().type,
-    }));
-  };
+//     return products.docs.map((product) => ({
+//       name: product.data().name,
+//       id: product.id,
+//       price: product.data().price,
+//       description: product.data().description,
+//       image: product.data().image,
+//       type: product.data().type,
+//     }));
+//   };
 
-  const featureProducts = await getProducts("feature");
-  const featureBannerProducts = await getProducts("feature-banner");
+//   const featureProducts = await getProducts("feature");
+//   const featureBannerProducts = await getProducts("feature-banner");
 
-  return {
-    props: { featureProducts, featureBannerProducts },
-  };
-}
+//   return {
+//     props: { featureProducts, featureBannerProducts },
+//   };
+// }
