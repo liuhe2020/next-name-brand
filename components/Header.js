@@ -16,23 +16,23 @@ import { selectBasketQty } from "../components/redux/basketSlice";
 
 export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
   const [navBar, setNavBar] = useState(false);
-  const [dropDown, setDropDown] = useState(false);
-  const dropDownRef = useRef();
+  // const [dropDown, setDropDown] = useState(false);
+  // const dropDownRef = useRef();
 
-  const basketQty = useSelector(selectBasketQty);
-  const [session] = useSession();
+  // const basketQty = useSelector(selectBasketQty);
+  // const [session] = useSession();
 
-  const router = useRouter();
+  // const router = useRouter();
 
-  const handleSignIn = () => {
-    session ? router.push("/account") : signIn();
-    setDropDown(false);
-  };
+  // const handleSignIn = () => {
+  //   session ? router.push("/account") : signIn();
+  //   setDropDown(false);
+  // };
 
-  const handleSignOut = () => {
-    session ? signOut() : signIn();
-    setDropDown(false);
-  };
+  // const handleSignOut = () => {
+  //   session ? signOut() : signIn();
+  //   setDropDown(false);
+  // };
 
   // listening for scroll event to fire navBar state change
   useEffect(() => {
@@ -45,14 +45,14 @@ export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
   }, []);
 
   // listen for click event to close dropdown menu
-  useEffect(() => {
-    // if clicked outside dropdown, close it
-    const closeDropDown = (e) =>
-      e.target.closest("div") !== dropDownRef.current && setDropDown(false);
+  // useEffect(() => {
+  //   // if clicked outside dropdown, close it
+  //   const closeDropDown = (e) =>
+  //     e.target.closest("div") !== dropDownRef.current && setDropDown(false);
 
-    window.addEventListener("click", closeDropDown);
-    return () => window.removeEventListener("click", closeDropDown);
-  }, []);
+  //   window.addEventListener("click", closeDropDown);
+  //   return () => window.removeEventListener("click", closeDropDown);
+  // }, []);
 
   return (
     <div
@@ -97,7 +97,7 @@ export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
             </Link>
           </li>
         </ul>
-        <div className="flex align-self-end text-gray-400">
+        {/* <div className="flex align-self-end text-gray-400">
           <SearchIcon
             onClick={() => setSearchToggle((prev) => !prev)}
             className="cursor-pointer w-6"
@@ -148,7 +148,7 @@ export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
               !navToggle && "hidden"
             } cursor-pointer w-7 ml-4 lg:hidden`}
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );
