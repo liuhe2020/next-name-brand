@@ -4,7 +4,7 @@ import { buffer } from "micro";
 import * as admin from "firebase-admin";
 
 // Firebase
-const serviceAccount = require("../../../permissions.json");
+const serviceAccount = require("../../permissions.json");
 // Merge permissions with env secret keys
 serviceAccount.client_id = process.env.FIREBASE_ADMIN_CLIENT_ID;
 serviceAccount.private_key_id = process.env.FIREBASE_ADMIN_PRIVATE_KEY_ID;
