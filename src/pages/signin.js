@@ -7,7 +7,7 @@ export default function SignIn({ providers }) {
       <Head>
         <title>Sign In | Name Brand</title>
         <meta name="description" content="Name Brand Sign In" />
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/images/favicon.png" />
       </Head>
       <div className="max-w-md mx-auto text-center px-5 py-20 mb-20 sm:px-16 sm:py-20">
         <div className="sm:bg-gray-50 m-10 py-20 sm:border sm:border-gray-200 sm:rounded-3xl">

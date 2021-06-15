@@ -14,9 +14,6 @@ export default function Search() {
     setTerm(e.target.input.value.toLowerCase().trim());
   };
 
-  console.log(term);
-  console.log(products);
-
   useEffect(() => {
     if (term) {
       const getProducts = async () => {

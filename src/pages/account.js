@@ -11,7 +11,7 @@ export default function Account({ session, orders }) {
       <Head>
         <title>My Account | Name Brand</title>
         <meta name="description" content="Name Brand My Account" />
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/images/favicon.png" />
       </Head>
       {session ? (
         <div className="py-5 lg:py-10 px-5 md:px-10 lg:mb-20">

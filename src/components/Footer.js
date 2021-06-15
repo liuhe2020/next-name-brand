@@ -115,7 +115,7 @@ export default function Footer() {
         </div>
       </div>
       <p className="text-xs pt-10 md:pt-20 lg:pb-10 text-gray-500 text-center">
-        &copy; 2021 NAME BRAND Ltd.
+        &copy; 2021 NAME BRAND
       </p>
     </div>
   );

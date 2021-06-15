@@ -19,7 +19,7 @@ export default function Product({ product }) {
       <Head>
         <title>{name} | Name Brand</title>
         <meta name="description" content={`Name Brand ${name}`} />
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/images/favicon.png" />
       </Head>
       <div className="max-w-3xl mx-auto flex flex-col justify-center items-center md:flex-row md:mb-10">
         <div className="grid place-items-center w-full bg-gray-50 md:w-1/2 h-115 md:my-10 md:ml-10 xl:h-150">

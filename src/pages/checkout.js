@@ -49,7 +49,7 @@ export default function Checkout() {
       <Head>
         <title>Check Out | Name Brand</title>
         <meta name="description" content="Name Brand Check Out" />
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/images/favicon.png" />
       </Head>
       <div className="min-h-screen max-w-screen-xl mx-auto lg:mb-20">
         <h1 className="font-semibold py-5 text-center text-xl lg:py-10">

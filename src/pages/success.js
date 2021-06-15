@@ -13,20 +13,27 @@ export default function Success() {
   }, []);
 
   return (
-    <div className="max-w-md mx-auto px-5 py-20 sm:px-16 sm:py-28">
-      <h1 className="text-xl font-semibold">Order Confirmation</h1>
-      <p className="py-10">
-        Thank you for your order! A confirmation has been sent to your email.
-        You may also check your order in the account section of our website.
-      </p>
+    <>
+      <Head>
+        <title>Order Confirmation | Name Brand</title>
+        <meta name="description" content="Name Brand Sign In" />
+        <link rel="icon" href="/images/favicon.png" />
+      </Head>
+      <div className="max-w-md mx-auto px-5 py-20 sm:px-16 sm:py-28">
+        <h1 className="text-xl font-semibold">Order Confirmation</h1>
+        <p className="py-10">
+          Thank you for your order! A confirmation has been sent to your email.
+          You may also check your order in the account section of our website.
+        </p>
 
-      <div className="pb-20">
-        <Link href="/account">
-          <a>
-            <ButtonDark text={"Go to my order"} />
-          </a>
-        </Link>
+        <div className="pb-20">
+          <Link href="/account">
+            <a>
+              <ButtonDark text={"Go to my order"} />
+            </a>
+          </Link>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
