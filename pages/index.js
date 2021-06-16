@@ -12,7 +12,7 @@ export default function Home({ featureBannerProducts, featureProducts }) {
       <Head>
         <title>Name Brand</title>
         <meta name="description" content="Name Brand online store" />
-        <link rel="icon" href="/images/favicon.png" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Banner />
       <Feature products={featureProducts} />

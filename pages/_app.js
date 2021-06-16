@@ -8,12 +8,15 @@ import Layout from "../components/Layout";
 import { hydrateBasket } from "../components/redux/basketSlice";
 
 // try & catch in case local storage is disabled
+// local storage is undefined initially in next.js due to SSR
+// only subscribe the store when local storage is available after page loaded
 try {
-  store.subscribe(() => {
-    const basket = store.getState().basket;
-    // save basket to local storage
-    localStorage.setItem("name-brand-basket", JSON.stringify(basket));
-  });
+  if (typeof localStorage !== "undefined")
+    store.subscribe(() => {
+      const basket = store.getState().basket;
+      // save basket to local storage
+      localStorage.setItem("name-brand-basket", JSON.stringify(basket));
+    });
 } catch (err) {
   console.error(err);
 }
@@ -21,7 +24,6 @@ try {
 export default function MyApp({ Component, pageProps }) {
   // fetch items from localstorage and update the basket if items exist
   useEffect(() => {
-    // local storage is undefined initially in next.js due to SSR
     try {
       if (typeof localStorage !== "undefined") {
         const storedBasket = localStorage.getItem("name-brand-basket");

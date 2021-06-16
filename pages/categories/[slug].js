@@ -60,7 +60,7 @@ export default function Category({ slug, products }) {
       <Head>
         <title>{category} | Name Brand</title>
         <meta name="description" content={`Name Brand ${category}`} />
-        <link rel="icon" href="/images/favicon.png" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="max-w-3xl min-h-screen mx-auto p-5 md:p-10">
         <div className="flex justify-between items-end">

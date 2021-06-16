@@ -45,30 +45,35 @@ export default function Search() {
           <SearchIcon />
         </button>
       </form>
-      <div className="p-5">
-        {products.map(({ id, name, image }) => (
-          <div
-            key={id}
-            className="flex items-center border-b border-gray-100 py-2"
-          >
-            <Link href={`/products/${id}`}>
-              <div className="cursor-pointer w-1/5 mr-3 sm:mr-5">
-                <Image
-                  src={image}
-                  width={100}
-                  height={100}
-                  objectFit="contain"
-                />
-              </div>
-            </Link>
-            <Link href={`/products/${id}`}>
-              <a>
-                <p className="">{name}</p>
-              </a>
-            </Link>
-          </div>
-        ))}
-      </div>
+
+      {term && products.length === 0 ? (
+        <p className="p-5">No search result. Please try again.</p>
+      ) : (
+        <div className="p-5">
+          {products.map(({ id, name, image }) => (
+            <div
+              key={id}
+              className="flex items-center border-b border-gray-100 py-2"
+            >
+              <Link href={`/products/${id}`}>
+                <div className="cursor-pointer w-1/5 mr-3 sm:mr-5">
+                  <Image
+                    src={image}
+                    width={100}
+                    height={100}
+                    objectFit="contain"
+                  />
+                </div>
+              </Link>
+              <Link href={`/products/${id}`}>
+                <a>
+                  <p className="">{name}</p>
+                </a>
+              </Link>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

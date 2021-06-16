@@ -16,7 +16,8 @@ export default function Layout({ children, categories }) {
   // close toggle at router change
   useEffect(() => {
     const handleToggle = () => {
-      setNavToggle(false), setSearchToggle(false);
+      setNavToggle(false);
+      setSearchToggle(false);
     };
 
     router.events.on("routeChangeComplete", handleToggle);
