@@ -45,7 +45,7 @@ export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
     return () => window.removeEventListener("scroll", navTransition);
   }, []);
 
-  // listen for click event to close dropdown menu
+  // listen for click event to close dropdown
   useEffect(() => {
     // if clicked outside dropdown, close it
     const closeDropDown = (e) =>
