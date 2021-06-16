@@ -73,6 +73,7 @@ export default function Header({ navToggle, setNavToggle, setSearchToggle }) {
             />
           </a>
         </Link>
+        <button onClick={signIn}>Sign In</button>
         <ul className="hidden font-semibold lg:flex">
           <li className="px-4">
             <Link href="/categories/laptops">Laptops</Link>
