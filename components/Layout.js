@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
-import NProgress from "nprogress";
 
 import Header from "./Header";
 import MobileNav from "./ui/MobileNav";
@@ -13,8 +12,6 @@ export default function Layout({ children, categories }) {
   const [searchToggle, setSearchToggle] = useState(false);
 
   const router = useRouter();
-
-  NProgress.configure({ showSpinner: false });
 
   // close toggle at router change
   useEffect(() => {
@@ -28,18 +25,6 @@ export default function Layout({ children, categories }) {
     };
   }, []);
 
-  useEffect(() => {
-    const startLoading = () => NProgress.start();
-    const endLoading = () => NProgress.done();
-
-    router.events.on("routeChangeStart", startLoading);
-    router.events.on("routeChangeComplete", endLoading);
-    return () => {
-      router.events.off("routeChangeStart", startLoading);
-      router.events.off("routeChangeComplete", endLoading);
-    };
-  }, []);
-
   return (
     <>
       <Header
@@ -48,7 +33,7 @@ export default function Layout({ children, categories }) {
         setSearchToggle={setSearchToggle}
         categories={categories}
       />
-      <AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
         {navToggle && (
           <motion.div
             key="nav"

@@ -27,7 +27,7 @@ export default function MyApp({ Component, pageProps }) {
         const storedBasket = localStorage.getItem("name-brand-basket");
         storedBasket
           ? store.dispatch(hydrateBasket(JSON.parse(storedBasket)))
-          : store.dispatch(hydrateBasket({ item: [] }));
+          : store.dispatch(hydrateBasket({ items: [] }));
       }
     } catch (err) {
       console.error(err);
