@@ -11,7 +11,7 @@ export default function Account({ session, orders }) {
       <Head>
         <title>My Account | Name Brand</title>
         <meta name="description" content="Name Brand My Account" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       {session ? (
         <div className="py-5 lg:py-10 px-5 md:px-10 lg:mb-20">
@@ -24,7 +24,7 @@ export default function Account({ session, orders }) {
             </h2>
           </div>
           {orders.length === 0 ? (
-            <h3 className="text-center">You haven't placed an order.</h3>
+            <h3 className="text-center py-5">You haven't placed an order.</h3>
           ) : (
             <Orders orders={orders} />
           )}

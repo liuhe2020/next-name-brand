@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useSession } from "next-auth/client";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
@@ -26,6 +27,7 @@ export default function Checkout() {
   const basketSubtotal = useSelector(selectBasketSubtotal);
   const dispatch = useDispatch();
   const [session] = useSession();
+  const router = useRouter();
 
   const checkoutSession = async () => {
     const stripe = await stripePromise;
@@ -49,7 +51,7 @@ export default function Checkout() {
       <Head>
         <title>Check Out | Name Brand</title>
         <meta name="description" content="Name Brand Check Out" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <div className="min-h-screen max-w-screen-xl mx-auto lg:mb-20">
         <h1 className="font-semibold py-5 text-center text-xl lg:py-10">
@@ -133,12 +135,18 @@ export default function Checkout() {
                 <h3 className="text-gray-500 text-sm">(Including VAT)</h3>
               </div>
               <div className="text-center">
-                <ButtonDark
-                  text={session ? "Check out" : "Sign in to checkout"}
-                  role="link"
-                  action={checkoutSession}
-                  disabled={session ? false : true}
-                />
+                {session ? (
+                  <ButtonDark
+                    text={"Check out"}
+                    role="link"
+                    action={checkoutSession}
+                  />
+                ) : (
+                  <ButtonDark
+                    text={"Sign in to checkout"}
+                    action={() => router.push("/signin")}
+                  />
+                )}
               </div>
             </div>
           </div>

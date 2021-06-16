@@ -18,7 +18,7 @@ export default function Success() {
       <Head>
         <title>Order Confirmation | Name Brand</title>
         <meta name="description" content="Name Brand Sign In" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <div className="max-w-md mx-auto px-5 py-20 sm:px-16 sm:py-28">
         <h1 className="text-xl font-semibold">Order Confirmation</h1>
