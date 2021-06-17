@@ -3,12 +3,10 @@
 import { buffer } from "micro";
 import * as admin from "firebase-admin";
 
-// Firebase
-const serviceAccount = require("../../permissions.json");
-// Merge permissions with env secret keys
-serviceAccount.client_id = process.env.FIREBASE_ADMIN_CLIENT_ID;
-serviceAccount.private_key_id = process.env.FIREBASE_ADMIN_PRIVATE_KEY_ID;
+// Firebase admin
+const serviceAccount = require("../../firebase-service-account.json");
 serviceAccount.private_key = process.env.FIREBASE_ADMIN_PRIVATE_KEY;
+serviceAccount.client_email = process.env.FIREBASE_ADMIN_CLIENT_EMAIL;
 
 const app = !admin.apps.length
   ? admin.initializeApp({
