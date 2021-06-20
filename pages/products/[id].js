@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,13 +7,19 @@ import { useDispatch } from "react-redux";
 import db from "../../firebase";
 import ButtonDark from "../../components/ui/ButtonDark";
 import ButtonLight from "../../components/ui/ButtonLight";
-import { addToBasket } from "../../components/redux/basketSlice";
 import CurrencyFormat from "../../components/ui/CurrencyFormat";
+import Toast from "../../components/ui/Toast";
+import { addToBasket } from "../../components/redux/basketSlice";
 
 export default function Product({ product }) {
   const { name, price, description, image } = product;
-
+  const [isToast, setIsToast] = useState(false);
   const dispatch = useDispatch();
+
+  const handleAddToBasket = () => {
+    dispatch(addToBasket(product));
+    setIsToast(true);
+  };
 
   return (
     <>
@@ -21,7 +28,7 @@ export default function Product({ product }) {
         <meta name="description" content={`Name Brand ${name}`} />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <div className="max-w-3xl mx-auto flex flex-col justify-center items-center md:flex-row md:mb-10">
+      <div className="relative overflow-hidden max-w-3xl mx-auto flex flex-col justify-center items-center md:flex-row md:mb-10">
         <div className="grid place-items-center w-full bg-gray-50 md:w-1/2 h-115 md:my-10 md:ml-10 xl:h-150">
           <div className="w-2/3 sm:w-1/2 md:w-3/4 lg:w-2/3 xl:w-7/12">
             <Image src={image} width={600} height={600} objectFit="contain" />
@@ -38,9 +45,9 @@ export default function Product({ product }) {
             </div>
             <div className="py-5 md:pt-7">
               <ButtonDark
-                text={"Add to cart"}
+                text={"Add to basket"}
                 margin={"mr-5"}
-                action={() => dispatch(addToBasket(product))}
+                action={handleAddToBasket}
               />
               <Link href="/checkout">
                 <a>
@@ -50,6 +57,7 @@ export default function Product({ product }) {
             </div>
           </div>
         </div>
+        <Toast isToast={isToast} setIsToast={setIsToast} />
       </div>
     </>
   );

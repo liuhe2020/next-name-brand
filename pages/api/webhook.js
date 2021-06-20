@@ -60,7 +60,7 @@ export default async (req, res) => {
 
       // Fullfill the order
       return fullfillOrder(session)
-        .then(() => res.status(200))
+        .then(() => res.status(200).json({ received: true }))
         .catch((err) =>
           res.status(400).send({ message: `Webhook error: ${err.message}` })
         );

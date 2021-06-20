@@ -34,7 +34,7 @@ export async function getServerSideProps(context) {
   // get user credentials
   const session = await getSession(context);
 
-  // redirect to sign in page if not signed in
+  // redirect to account page after signing in
   if (session)
     return {
       redirect: { destination: "/account", permanent: false },

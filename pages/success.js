@@ -20,7 +20,7 @@ export default function Success() {
         <meta name="description" content="Name Brand Sign In" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <div className="max-w-md mx-auto px-5 py-20 sm:px-16 sm:py-28">
+      <div className="max-w-sreen-md mx-auto px-5 py-20 sm:px-16 sm:py-28">
         <h1 className="text-xl font-semibold">Order Confirmation</h1>
         <p className="py-10">
           Thank you for your order! A confirmation has been sent to your email.

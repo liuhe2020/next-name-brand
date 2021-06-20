@@ -9,7 +9,7 @@ export default function Orders({ orders }) {
       {orders.map(({ id, amount, amountShipping, items, timestamp }) => (
         <div
           key={id}
-          className="max-w-md mx-auto flex flex-col py-5 border-b border-gray-100 sm:p-10 lg:bg-gray-50"
+          className="max-w-sreen-md mx-auto flex flex-col py-5 border-b border-gray-100 sm:p-10 lg:bg-gray-50"
         >
           <div className="py-5 text-sm font-semibold sm:text-base sm:flex sm:justify-between">
             <div>

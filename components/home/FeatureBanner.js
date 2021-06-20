@@ -2,15 +2,15 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import CurrencyFormat from "../ui/CurrencyFormat";
 
+import CurrencyFormat from "../ui/CurrencyFormat";
 import ButtonDark from "../ui/ButtonDark";
 
 export default function FeatureBanner({ products }) {
   const [selected, setSelected] = useState("Headphones");
 
   return (
-    <div className=" max-w-3xl my-0 mx-auto p-5 bg-white h-250 sm:h-275 md:h-250 lg:h-200">
+    <div className="overflow-hidden max-w-3xl my-0 mx-auto p-5 bg-white h-250 sm:h-275 md:h-250 lg:h-200">
       <h1 className="text-xl mb-5 font-semibold text-center lg:text-left lg:m-5">
         Top Of The Range
       </h1>
@@ -20,9 +20,9 @@ export default function FeatureBanner({ products }) {
             key={type}
             className={`${
               selected === type
-                ? `text-opacity-90`
-                : `hover:text-opacity-40 text-opacity-20`
-            } relative inline-block font-sans text-black text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black z-10 mx-1 mb-5 sm:mx-2 md:mx-5 cursor-pointer transition-all duration-500 `}
+                ? `text-black text-opacity-90`
+                : `text-gray-400 text-opacity-30 hover:z-10 hover:text-gray-400 hover:text-opacity-80`
+            } relative inline-block font-sans text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black mx-1 mb-5 sm:mx-2 md:mx-5 cursor-pointer transition-all duration-500`}
             onClick={() => setSelected(type)}
           >
             {type}
@@ -39,7 +39,7 @@ export default function FeatureBanner({ products }) {
                   initial={{ opacity: 0, y: 150 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 1, type: "tween" }}
-                  className="w-4/5 md:w-1/2 lg:w-100 xl:w-128 mx-auto lg:mx-0 lg:absolute lg:-top-24 lg:left-32 2xl:left-64 2xl:-top-40"
+                  className="pointer-events-none w-4/5 md:w-1/2 lg:w-100 xl:w-128 mx-auto lg:mx-0 lg:absolute lg:-top-24 lg:left-32 2xl:left-64 2xl:-top-40"
                 >
                   <Image
                     width={600}
