@@ -18,7 +18,6 @@ module.exports = {
       maxWidth: {
         xxs: "288px",
         xs: "480px",
-        md: "768px",
         "3xl": "1760px",
         hd: "1920px",
       },

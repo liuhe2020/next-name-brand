@@ -110,12 +110,11 @@ export default function Footer() {
               className="inline-block h-6 mr-3"
             />
             <img src="/images/amex.png" className="inline-block h-6 mr-3" />
-            <img src="/images/paypal.png" className="inline-block h-5" />
           </div>
         </div>
       </div>
       <p className="max-w-2xl mx-auto text-center text-gray-500 text-xs pt-10 sm:text-sm md:pt-20 lg:pb-10">
-        &copy; 2021 NAME BRAND.
+        &copy; 2022 NAME BRAND.
         <br />
         <br />
         Disclaimer: This webiste is a demo. All displayed products are fake and

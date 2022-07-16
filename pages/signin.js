@@ -9,7 +9,7 @@ export default function SignIn({ providers }) {
         <meta name="description" content="Name Brand Sign In" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <div className="max-w-md mx-auto text-center px-5 py-20 mb-20 sm:px-16 sm:py-20">
+      <div className="max-w-screen-md mx-auto text-center px-5 py-20 mb-20 sm:px-16 sm:py-20">
         <div className="sm:bg-gray-50 m-10 py-20 sm:border sm:border-gray-200 sm:rounded-3xl">
           <h1 className="pb-20 text-xl font-semibold">
             Sign in to your Name Brand Account
