@@ -16,6 +16,9 @@ Live site: [https://namebrand.vercel.app/](https://namebrand.vercel.app/)
 
 ## Key Features
 
-- Browse new movies and movies by genres
-- Watch trailers of all movies
-- Search movies and add to watch list
+- Product categories
+- Statically generated individual product pages
+- Search products
+- Stripe payment integration
+- User account page showing order history
+- Cached shopping basket
