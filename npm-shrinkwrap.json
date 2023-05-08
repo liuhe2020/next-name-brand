@@ -8,7 +8,7 @@
       "name": "with-tailwindcss",
       "version": "0.1.0",
       "dependencies": {
-        "@heroicons/react": "^1.0.1",
+        "@heroicons/react": "^2.0.16",
         "@reduxjs/toolkit": "^1.6.0",
         "@stripe/stripe-js": "^1.15.0",
         "axios": "^0.21.1",
@@ -750,9 +750,9 @@
       }
     },
     "node_modules/@heroicons/react": {
-      "version": "1.0.1",
-      "resolved": "https://registry.npmjs.org/@heroicons/react/-/react-1.0.1.tgz",
-      "integrity": "sha512-uikw2gKCmqnvjVxitecWfFLMOKyL9BTFcU4VM3hHj9OMwpkCr5Ke+MRMyY2/aQVmsYs4VTq7NCFX05MYwAHi3g==",
+      "version": "2.0.16",
+      "resolved": "https://registry.npmjs.org/@heroicons/react/-/react-2.0.16.tgz",
+      "integrity": "sha512-x89rFxH3SRdYaA+JCXwfe+RkE1SFTo9GcOkZettHer71Y3T7V+ogKmfw5CjTazgS3d0ClJ7p1NA+SP7VQLQcLw==",
       "peerDependencies": {
         "react": ">= 16"
       }
@@ -5612,9 +5612,9 @@
       }
     },
     "@heroicons/react": {
-      "version": "1.0.1",
-      "resolved": "https://registry.npmjs.org/@heroicons/react/-/react-1.0.1.tgz",
-      "integrity": "sha512-uikw2gKCmqnvjVxitecWfFLMOKyL9BTFcU4VM3hHj9OMwpkCr5Ke+MRMyY2/aQVmsYs4VTq7NCFX05MYwAHi3g==",
+      "version": "2.0.16",
+      "resolved": "https://registry.npmjs.org/@heroicons/react/-/react-2.0.16.tgz",
+      "integrity": "sha512-x89rFxH3SRdYaA+JCXwfe+RkE1SFTo9GcOkZettHer71Y3T7V+ogKmfw5CjTazgS3d0ClJ7p1NA+SP7VQLQcLw==",
       "requires": {}
     },
     "@next-auth/prisma-legacy-adapter": {
